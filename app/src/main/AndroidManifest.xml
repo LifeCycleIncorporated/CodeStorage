@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="lifecycle.inc.codestorage">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_app"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/bangladesh_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CodeStorage">
+        <activity
+            android:name=".Animation_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Rotation_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Ludu_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Check_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Display_Only_activity"
+            android:exported="false" />
+        <activity
+            android:name=".ListView_Only_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Profile_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Singup_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SingInSingUp_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SQLite_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_ListView_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Display_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CardView_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Welcome_Screen_Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
