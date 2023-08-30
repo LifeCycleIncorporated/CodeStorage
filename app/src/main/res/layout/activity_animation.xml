@@ -7,7 +7,6 @@
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".Animation_Activity">
-
     <ImageView
         android:id="@+id/animationImageViewId"
         android:src="@drawable/bitcoin_icon"
