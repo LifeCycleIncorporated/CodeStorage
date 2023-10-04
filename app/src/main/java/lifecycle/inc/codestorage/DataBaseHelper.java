@@ -54,10 +54,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         }
     }
 
-
-
-
-
     public long insertData(String name, String age, String gender)
     {
             SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
