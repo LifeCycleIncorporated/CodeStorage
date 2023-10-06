@@ -54,22 +54,16 @@ public class SQLite_Activity extends AppCompatActivity implements View.OnClickLi
         String gender = genderEditText.getText().toString();
         String id = idEditText.getText().toString();
 
+        if (view.getId()==R.id.saveButtonId){
 
-
-
-
-
-        if (view.getId()==R.id.saveButtonId)
-        {
             //this code is not working
-            if (name.equals(" "))
-            {
+            if (name.equals(" ")){
                 Toast.makeText(getApplicationContext(),"Row is not inserted",Toast.LENGTH_LONG).show();
             }
 
             long rowId = dataBaseHelper.insertData(name,age,gender);
-            if (rowId>0)
-            {
+
+            if (rowId>0){
                 Toast.makeText(getApplicationContext(),"Row "+rowId+" is successful insertData",Toast.LENGTH_LONG).show();
             }
         }

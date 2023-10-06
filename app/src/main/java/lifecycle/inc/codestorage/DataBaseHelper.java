@@ -18,9 +18,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static final String GENDER = "gender";
     private static final int VERSION_NUMBER = 22;
 
-    private static final String create_table = "CREATE TABLE "+TABLE_NAME+" ("+ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+NAME+" VARCHAR (255), "+AGE+" INTEGER, "+GENDER+" VARCHAR(15))";
+    private static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+" ("+ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+NAME+" VARCHAR (255), "+AGE+" INTEGER, "+GENDER+" VARCHAR(15))";
 
-    private static final String drop_table = "DROP TABLE IF EXISTS " +TABLE_NAME;
+    private static final String DROP_TABLE = "DROP TABLE IF EXISTS " +TABLE_NAME;
 
     private static final String SELECT_ALL = "SELECT * FROM " +TABLE_NAME;
 
@@ -35,7 +35,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         try {
             Toast.makeText(context,"onCreate is active",Toast.LENGTH_LONG).show();
-            sqLiteDatabase.execSQL(create_table);
+            sqLiteDatabase.execSQL(CREATE_TABLE);
         }catch (Exception e)
         {
             Toast.makeText(context,"Exception : "+e,Toast.LENGTH_SHORT).show();
@@ -46,7 +46,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         try {
             Toast.makeText(context,"onUpgrade is active",Toast.LENGTH_SHORT).show();
-            sqLiteDatabase.execSQL(drop_table);
+            sqLiteDatabase.execSQL(DROP_TABLE);
             onCreate(sqLiteDatabase);
         }catch (Exception e)
         {
