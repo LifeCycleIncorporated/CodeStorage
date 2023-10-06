@@ -22,6 +22,7 @@ public class Singup_Activity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singup);
+
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -31,6 +32,7 @@ public class Singup_Activity extends AppCompatActivity implements View.OnClickLi
         passwordEditText=findViewById(R.id.singUpPasswordEditTextId);
         singUpLogInButton=findViewById(R.id.singUpSingUpId);
         singUpSingUpButton=findViewById(R.id.singUpLoginInId);
+
         databaseHelper = new SingUpDatabaseHelper(this);
 
         userDetails = new UserDetails();

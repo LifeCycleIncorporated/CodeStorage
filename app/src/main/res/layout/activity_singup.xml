@@ -37,6 +37,7 @@
 
         <EditText
             android:id="@+id/singUpEmailEditTextId"
+            android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -71,6 +72,7 @@
 
         <EditText
             android:id="@+id/singUpPasswordEditTextId"
+            android:inputType="numberPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"

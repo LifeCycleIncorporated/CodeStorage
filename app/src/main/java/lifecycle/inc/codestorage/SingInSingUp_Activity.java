@@ -50,8 +50,7 @@ public class SingInSingUp_Activity extends AppCompatActivity implements View.OnC
         String password = mainPasswordEditText.getText().toString();
 
 
-        if (view.getId()==R.id.mainLoginButtonId)
-        {
+        if (view.getId()==R.id.mainLoginButtonId){
 
             Boolean results = databaseHelper.findPassword(username,password);
             if(results==true)
@@ -59,11 +58,12 @@ public class SingInSingUp_Activity extends AppCompatActivity implements View.OnC
                 Intent intent = new Intent(SingInSingUp_Activity.this,MainActivity.class);
                 startActivity(intent);
             } else {
-                Toast.makeText(getApplicationContext(),"error",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Incorrect User or Password",Toast.LENGTH_SHORT).show();
             }
 
-        } else if (view.getId()==R.id.mainSingUpButtonId)
-        {
+        }
+
+        else if (view.getId()==R.id.mainSingUpButtonId){
             Intent intent = new Intent(SingInSingUp_Activity.this,Singup_Activity.class);
             startActivity(intent);
         } else {

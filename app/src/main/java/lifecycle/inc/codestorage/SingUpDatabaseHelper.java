@@ -18,7 +18,7 @@ public class SingUpDatabaseHelper extends SQLiteOpenHelper{
     private static final String EMAIL = "Email";
     private static final String USERNAME = "Username";
     private static final String PASSWORD = "Password";
-    private static final int VERSION_NUMBER = 5;
+    private static final int VERSION_NUMBER = 6;
     private Context context;
 
 
@@ -78,11 +78,13 @@ public class SingUpDatabaseHelper extends SQLiteOpenHelper{
 
         if (cursor.getCount() == 0) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-        } else {
+        }
+
+        else {
             while (cursor.moveToNext())
             {
-                String username = cursor.toString();
-                String password = cursor.toString();
+                String username = cursor.getString(3);
+                String password = cursor.getString(4);
 
                 if (username.equals(uname) && password.equals(pass))
                 {

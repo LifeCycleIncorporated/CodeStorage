@@ -66,6 +66,7 @@
             android:layout_height="wrap_content"
             android:textSize="19sp"
             android:text="Create a account"/>
+
         <Button
             android:id="@+id/mainSingUpButtonId"
             android:textStyle="bold"
