@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">Code Storage</string>
+
+    <string name="autolink_text">
+        Name : Life Cycle Inc \n
+        Phone : +8801531209114\n
+        Email : lifecycle.info@gmail.com\n
+        Website : lifecycleinc.blogger.com\n
+    </string>
+
     <string name="OnlyText1">
         Conversation আত্ম-পরিচয় - About yourself \n
         What is your name?\n

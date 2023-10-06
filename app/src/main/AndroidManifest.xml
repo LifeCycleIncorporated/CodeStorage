@@ -9,6 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeStorage">
         <activity
+            android:name=".AutoLinkActivity"
+            android:exported="false" />
+        <activity
             android:name=".Animation_Activity"
             android:exported="false" />
         <activity

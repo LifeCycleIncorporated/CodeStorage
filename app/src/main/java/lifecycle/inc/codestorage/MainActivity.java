@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
             imageViewButton,
             luduButton,
             rotation,
-            animation;
+            animation,
+            autoLink;
 
     static ArrayList<String> arrayList = new ArrayList<>();
     MainAdapter adapter;
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         luduButton=findViewById(R.id.luduButtonId);
         rotation=findViewById(R.id.rotationButtonId);
         animation=findViewById(R.id.animationButtonId);
+        autoLink=findViewById(R.id.autoLinkId);
 
         check.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,6 +137,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        autoLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,AutoLinkActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
@@ -157,8 +167,10 @@ public class MainActivity extends AppCompatActivity {
 
         //Initialize adapter
         adapter = new MainAdapter(this,arrayList);
+
         //Set layout manager
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         //Set adapter
         recyclerView.setAdapter(adapter);
 

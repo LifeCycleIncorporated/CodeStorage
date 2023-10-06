@@ -61,7 +61,6 @@
                     android:background="@drawable/button_shape"
                     android:text="SQLite Button"/>
 
-                //Custom ListView Button
                 <Button
                     android:id="@+id/customListViewButtonId"
                     android:layout_width="match_parent"
@@ -73,7 +72,7 @@
                     android:background="@drawable/button_shape"
                     android:text="Custom LIstView Button"/>
 
-                //ListView Button
+
                 <Button
                     android:id="@+id/listViewButtonId"
                     android:layout_width="match_parent"
@@ -85,7 +84,7 @@
                     android:background="@drawable/button_shape"
                     android:text="LIstView Button"/>
 
-                //CardView Button
+               
                 <Button
                     android:id="@+id/cardViewButtonId"
                     android:layout_width="match_parent"
@@ -139,6 +138,16 @@
                     android:textAllCaps="false"
                     android:background="@drawable/button_shape"
                     android:text="Animation"/>
+                <Button
+                    android:id="@+id/autoLinkId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:padding="20dp"
+                    android:layout_margin="10dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_shape"
+                    android:text="Auto Link"/>
 
                 <Button
                     android:id="@+id/extraButtonId"

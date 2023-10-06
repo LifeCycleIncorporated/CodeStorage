@@ -30,6 +30,7 @@ public class Singup_Activity extends AppCompatActivity implements View.OnClickLi
         emailEditText=findViewById(R.id.singUpEmailEditTextId);
         usernameEditText=findViewById(R.id.singUpUsernameEditTextId);
         passwordEditText=findViewById(R.id.singUpPasswordEditTextId);
+        
         singUpLogInButton=findViewById(R.id.singUpSingUpId);
         singUpSingUpButton=findViewById(R.id.singUpLoginInId);
 
