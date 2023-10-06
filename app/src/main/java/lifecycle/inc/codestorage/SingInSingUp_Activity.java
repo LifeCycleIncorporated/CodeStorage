@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class SingInSingUp_Activity extends AppCompatActivity implements View.OnClickListener {
 
-    SingUpDatabaseHelper databaseHelper;
+    SingUpDatabaseHelper singUpDatabaseHelper;
 
     private EditText mainUserNameEditText, mainPasswordEditText;
     private Button mainLogInButton, mainSingUpButton;
@@ -36,8 +36,8 @@ public class SingInSingUp_Activity extends AppCompatActivity implements View.OnC
         mainLogInButton=findViewById(R.id.mainLoginButtonId);
         mainSingUpButton=findViewById(R.id.mainSingUpButtonId);
 
-        databaseHelper = new SingUpDatabaseHelper(this);
-        SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
+        singUpDatabaseHelper = new SingUpDatabaseHelper(this);
+        SQLiteDatabase sqLiteDatabase = singUpDatabaseHelper.getWritableDatabase();
 
         mainLogInButton.setOnClickListener(this);
         mainSingUpButton.setOnClickListener(this);
@@ -52,7 +52,7 @@ public class SingInSingUp_Activity extends AppCompatActivity implements View.OnC
 
         if (view.getId()==R.id.mainLoginButtonId){
 
-            Boolean results = databaseHelper.findPassword(username,password);
+            Boolean results = singUpDatabaseHelper.findPassword(username,password);
             if(results==true)
             {
                 Intent intent = new Intent(SingInSingUp_Activity.this,MainActivity.class);

@@ -67,6 +67,7 @@ public class SingUpDatabaseHelper extends SQLiteOpenHelper{
         contentValues.put(USERNAME,userDetails.getUsername());
         contentValues.put(PASSWORD,userDetails.getPassword());
 
+
         long rowId = sqLiteDatabase.insert(TABLE_NAME,null,contentValues);
         return rowId;
     }

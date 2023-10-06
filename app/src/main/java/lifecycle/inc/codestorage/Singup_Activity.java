@@ -51,21 +51,35 @@ public class Singup_Activity extends AppCompatActivity implements View.OnClickLi
             String username = usernameEditText.getText().toString();
             String password = passwordEditText.getText().toString();
 
-            userDetails.setName(name);
-            userDetails.setEmail(email);
-            userDetails.setUsername(username);
-            userDetails.setPassword(password);
+            // jodi kono ghor khali rakhe tahole ei if jak korobe;
+            if (name.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty()){
+                Toast.makeText(getApplicationContext(),"Please insert data",Toast.LENGTH_SHORT).show();
 
-            long rowId = databaseHelper.insertData(userDetails);
+            }
+            // jodi sob ghor purrno kora hoy tahole else kaj korobe;
+            else {
 
-            if (rowId>0)
-            {
-                Toast.makeText(getApplicationContext(),"Row "+rowId+" is inserted successful",Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(getApplicationContext(),"Row "+ rowId+" is inserted failed",Toast.LENGTH_SHORT).show();
+                userDetails.setName(name);
+                userDetails.setEmail(email);
+                userDetails.setUsername(username);
+                userDetails.setPassword(password);
+
+
+                // sob kichu thik thakole SingUpDatabaseHelper clss e data pathabe
+                long rowId = databaseHelper.insertData(userDetails);
+
+                if (rowId>0)
+                {
+                    Toast.makeText(getApplicationContext(),"Row "+rowId+" is inserted successful",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(),"Row "+ rowId+" is inserted failed",Toast.LENGTH_SHORT).show();
+                }
             }
 
-        } else if (view.getId() == R.id.singUpLoginInId)
+
+        }
+
+        else if (view.getId() == R.id.singUpLoginInId)
         {
             Intent intent = new Intent(Singup_Activity.this,SingInSingUp_Activity.class);
             startActivity(intent);
