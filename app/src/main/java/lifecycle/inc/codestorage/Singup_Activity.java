@@ -58,7 +58,6 @@ public class Singup_Activity extends AppCompatActivity implements View.OnClickLi
             }
             // jodi sob ghor purrno kora hoy tahole else kaj korobe;
             else {
-
                 userDetails.setName(name);
                 userDetails.setEmail(email);
                 userDetails.setUsername(username);
@@ -68,15 +67,16 @@ public class Singup_Activity extends AppCompatActivity implements View.OnClickLi
                 // sob kichu thik thakole SingUpDatabaseHelper clss e data pathabe
                 long rowId = databaseHelper.insertData(userDetails);
 
-                if (rowId>0)
-                {
+                if (rowId>0) {
                     Toast.makeText(getApplicationContext(),"Row "+rowId+" is inserted successful",Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(),"Row "+ rowId+" is inserted failed",Toast.LENGTH_SHORT).show();
                 }
+                nameEditText.setText("");
+                emailEditText.setText("");
+                usernameEditText.setText("");
+                passwordEditText.setText("");
             }
-
-
         }
 
         else if (view.getId() == R.id.singUpLoginInId)
@@ -84,7 +84,6 @@ public class Singup_Activity extends AppCompatActivity implements View.OnClickLi
             Intent intent = new Intent(Singup_Activity.this,SingInSingUp_Activity.class);
             startActivity(intent);
         }
-
     }
 
     @Override
