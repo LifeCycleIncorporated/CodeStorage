@@ -84,7 +84,7 @@
                     android:background="@drawable/button_shape"
                     android:text="LIstView Button"/>
 
-               
+
                 <Button
                     android:id="@+id/cardViewButtonId"
                     android:layout_width="match_parent"
