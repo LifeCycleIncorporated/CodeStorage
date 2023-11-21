@@ -147,11 +147,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
         //Clear array list.
         arrayList.clear();
 
