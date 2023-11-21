@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "492611632829",
+    "project_id": "code-storage-1c21f",
+    "storage_bucket": "code-storage-1c21f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492611632829:android:208278476d0df209a781d4",
+        "android_client_info": {
+          "package_name": "lifecycle.inc.codestorage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEo0nB1Enz_LsyCuphid8mGizmUWB1b5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
